@@ -1,0 +1,14 @@
+Random randola=new Random();
+
+        int crt =randola.nextInt(4);
+        if ( crt ==2) {
+           int critico= p.atacar() *2;
+            boss.receberDano(dano);
+            pause(1500);
+        }
+
+        else{
+            int critico=p.atacar();
+            boss.receberDano(dano);
+            pause(1500);
+        }
