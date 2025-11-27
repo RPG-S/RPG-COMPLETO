@@ -318,9 +318,13 @@ public class Main {
             System.out.print("> ");
             int acao = 0;
             while (acao < 1 || acao > 4) {
-                while (!sc.hasNextInt()) { sc.next(); System.out.print("> "); }
+                while (!sc.hasNextInt()) {
+                    System.out.println("Opção Inválida. Tente novamente");
+                    sc.next(); System.out.print("> "); }
                 acao = sc.nextInt();
-                if (acao < 1 || acao > 4) System.out.print("> ");
+                if (acao < 1 || acao > 4)
+                    System.out.println("Opção Inválida. Tente novamente");
+                    System.out.print("> ");
             }
 
             // ----- TURNO DO JOGADOR -----
@@ -329,6 +333,7 @@ public class Main {
                 System.out.print("> ");
                 int escolha = 1;
                 while (true) {
+                    
                     while (!sc.hasNextInt()) { sc.next(); System.out.print("> "); }
                     escolha = sc.nextInt();
                     if (escolha >= 1 && escolha <= p.ataques.length) break;
